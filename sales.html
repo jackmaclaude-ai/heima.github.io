@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>销售专家 | 首页</title>
+    <style>
+        /* --- 整体设计风格 --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', '思源黑体', 'PingFang SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- 导航栏 --- */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #005A9C;
+        }
+        
+        .nav-links a.active {
+            font-weight: 700;
+            color: #005A9C;
+        }
+
+
+        /* --- 首屏 Hero Section --- */
+        .hero {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #005A9C;
+            color: #ffffff;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #004170;
+            transform: translateY(-2px);
+        }
+
+        /* --- 核心理念 Section --- */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .philosophy-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .philosophy-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #005A9C;
+        }
+
+        /* --- 精选洞见 Section --- */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .insight-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        
+        .insight-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .insight-card .card-content {
+            padding: 25px;
+        }
+        
+        .insight-card h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        
+        .insight-card a {
+            text-decoration: none;
+            color: #005A9C;
+            font-weight: 700;
+        }
+
+        /* --- 页脚 Footer --- */
+        .footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+        
+        .footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">销售专家</div>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">关于我</a>
+                <a href="#">服务项目</a>
+                <a href="#">销售洞见</a>
+                <a href="#">联系我</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>不仅仅是完成交易，<br>更是赢得信任与长期价值。</h1>
+            <p>十年B2B销售实战专家，致力于通过行之有效的方法论提升团队与个人业绩。</p>
+            <a href="#" class="cta-button">了解我的服务</a>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">我的销售哲学</h2>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <h3>建立信任</h3>
+                        <p>"销售的本质是信息传递，核心是先拿到信任，再拿订单。客户信的不是产品，而是你这个人。"</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>深度挖需</h3>
+                        <p>"客户要什么不是需求，'为什么要'才是需求。我的工作是与客户一同探寻问题的根源，识别真伪需求。"</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>价值共创</h3>
+                        <p>"谈判不是争输赢，而是共赢。最高级的策略是让对方感觉赢了，从而舒服地达成合作。"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: #ffffff;">
+            <div class="container">
+                <h2 class="section-title">精选洞见</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="card-content">
+                            <h3>客户说太贵了？三招让他觉得物超所值</h3>
+                            <p>面对砍价是销售的日常。关键在于区分试探性砍价与真实砍价，并通过价值交换而非单纯降价来应对。</p>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="card-content">
+                            <h3>B2B销售的本质：你是在卖给公司，还是在卖给人？</h3>
+                            <p>公司不会签字，人会。你需要找到客户的"个人动机"与"组织目标"的结合点，这才是搞定决策链的关键。</p>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="card-content">
+                            <h3>高效破冰万能公式，三句话抓住客户兴趣</h3>
+                            <p>破冰的目标是快速建立信任并拿到邀约。通过"彩虹屁 + 公共区 + 案例刺激"的公式，可以有效激发客户兴趣。</p>
+                            <a href="#">阅读更多 &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 销售专家. All Rights Reserved.</p>
+            <p>一个旨在帮助销售成功的个人品牌网站。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
